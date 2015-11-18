@@ -1,10 +1,20 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
-    <iframe src="https://www.facebook.com" style="height:400;width:400">
-    	
+	<body>
 
+		<iframe width="100%" height="300px" src="demo_iframe.htm" name="iframe_a"></iframe>
+		<p><a id="link1" href="http://www.w3schools.com" target="iframe_a">W3Schools.com</a></p>
 
+		<iframe width="100%" height="300px" src="demo_iframe.htm" name="iframe_b"></iframe>
+		<p><a id="link2" href="https://www.facebook.com" target="iframe_b">W3Schools.com</a></p>
 
-    </iframe>
+		<p>When the target of a link matches the name of an iframe, the link will open in the iframe.</p>
 
+	</body>
 </html>
+<script>
+	window.onload = function(){
+		document.getElementById('link1').click();
+		document.getElementById('link2').click();
+	}
+</script>
